@@ -21727,7 +21727,7 @@
       <v-sphere radius="0.45" position="-4.17 0.6 -4.17" color="#6aab45" surface="leaves"/>
       <v-sphere radius="0.45" position="-5.9 0.6 0" color="#f2b544" surface="leaves"/>
       <v-sphere radius="0.45" position="-4.17 0.6 4.17" color="#6aab45" surface="leaves"/>
-      <v-sound src="assets/fountain.wav" position="0 1.2 0" volume="0.35" distance="1.6"/>
+      <v-sound src="assets/fountain.wav" position="0 1.2 0" volume="0.12" distance="1.6"/>
     </v-group>
     <v-cylinder radius="1.54" height="0.7" position="7.31 0.55 -43.39" color="#d6cab2" segments="12" collide="true" surface="stone"/>
     <v-cylinder radius="1.33" height="0.08" position="7.31 0.92 -43.39" color="#6b8a3e" segments="12" surface="grass"/>
@@ -21813,12 +21813,12 @@
     <!-- Ambience (synthesised by tools/sample-assets/make-ambience.mjs). Balanced to sit quietly
          under everything: a soft breeze and a faint town hum all around, birds on the rooftops,
          the fountain only up close. All of it fades in as the world arrives. -->
-    <v-sound src="assets/breeze.wav" spatial="false" volume="0.22"/>
-    <v-sound src="assets/town.wav" spatial="false" volume="0.14"/>
-    <v-sound src="assets/birds.wav" position="13.9 24 -54.3" volume="0.45" distance="10"/>
-    <v-sound src="assets/birds.wav" position="53.0 24 18.1" volume="0.45" distance="10"/>
-    <v-sound src="assets/birds.wav" position="-14.3 24 54.1" volume="0.45" distance="10"/>
-    <v-sound src="assets/birds.wav" position="-51.8 24 -21.2" volume="0.45" distance="10"/>
+    <v-sound src="assets/breeze.wav" spatial="false" volume="0.07"/>
+    <v-sound src="assets/town.wav" spatial="false" volume="0.045"/>
+    <v-sound src="assets/birds.wav" position="13.9 24 -54.3" volume="0.07" distance="10"/>
+    <v-sound src="assets/birds.wav" position="53.0 24 18.1" volume="0.07" distance="10"/>
+    <v-sound src="assets/birds.wav" position="-14.3 24 54.1" volume="0.07" distance="10"/>
+    <v-sound src="assets/birds.wav" position="-51.8 24 -21.2" volume="0.07" distance="10"/>
     <!-- Birds: a flock wheeling around the tower just above the rooftops, and a few higher, further out -->
     <v-flock position="0 36 0" count="9" radius="42" speed="0.1"/>
     <v-flock position="30 52 -70" count="5" radius="55" speed="0.07"/>
