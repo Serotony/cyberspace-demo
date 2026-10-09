@@ -394,8 +394,117 @@
       <v-box size="1.6 18.48 0.3" position="-5 50.16 8.66" color="#34465e" rotation="0 330 0" surface="glass"/>
       <v-cylinder radius="10.6" height="1" position="0 66 0" color="#f7f0e1" segments="24" surface="marble"/>
       <v-sphere radius="9.8" position="0 66 0" color="#6aa596" surface="slate"/>
-      <v-cylinder radius="1.6" height="4" position="0 77.6 0" color="#f7f0e1" segments="12" surface="marble"/>
-      <v-sphere radius="1.4" position="0 80 0" color="#e2b84e" surface="gold"/>
+      <!-- The lookout: a railed platform on top of the green dome, 75 m up, reached through the
+           portal in your room. You arrive facing the giant tower, with your balcony tiny on its side. -->
+      <v-group id="lookout">
+        <v-cylinder radius="3.6" height="1.6" position="0 74.8 0" color="#f3ecdd" segments="32" surface="marble"/>
+        <v-cylinder radius="4.3" height="0.25" position="0 75.725 0" color="#e9e1cf" segments="40" surface="paving" collide="true"/>
+        <v-box size="1.080 0.1 0.14" position="4.050 76.850 0.000" rotation="0 -90 0" color="#f3ecdd" surface="marble" collide="true"/>
+        <v-box size="1.080 0.05 0.08" position="4.050 76.400 0.000" rotation="0 -90 0" color="#f3ecdd" surface="marble"/>
+        <v-box size="1.080 0.12 0.16" position="4.050 75.910 0.000" rotation="0 -90 0" color="#e9e1cf" surface="marble"/>
+        <v-cylinder radius="0.05" height="0.95" position="4.015 76.325 0.529" color="#f3ecdd" segments="10" surface="marble"/>
+        <v-box size="1.080 0.1 0.14" position="3.912 76.850 1.048" rotation="0 -105 0" color="#f3ecdd" surface="marble" collide="true"/>
+        <v-box size="1.080 0.05 0.08" position="3.912 76.400 1.048" rotation="0 -105 0" color="#f3ecdd" surface="marble"/>
+        <v-box size="1.080 0.12 0.16" position="3.912 75.910 1.048" rotation="0 -105 0" color="#e9e1cf" surface="marble"/>
+        <v-cylinder radius="0.05" height="0.95" position="3.742 76.325 1.550" color="#f3ecdd" segments="10" surface="marble"/>
+        <v-box size="1.080 0.1 0.14" position="3.507 76.850 2.025" rotation="0 -120 0" color="#f3ecdd" surface="marble" collide="true"/>
+        <v-box size="1.080 0.05 0.08" position="3.507 76.400 2.025" rotation="0 -120 0" color="#f3ecdd" surface="marble"/>
+        <v-box size="1.080 0.12 0.16" position="3.507 75.910 2.025" rotation="0 -120 0" color="#e9e1cf" surface="marble"/>
+        <v-cylinder radius="0.05" height="0.95" position="3.213 76.325 2.465" color="#f3ecdd" segments="10" surface="marble"/>
+        <v-box size="1.080 0.1 0.14" position="2.864 76.850 2.864" rotation="0 -135 0" color="#f3ecdd" surface="marble" collide="true"/>
+        <v-box size="1.080 0.05 0.08" position="2.864 76.400 2.864" rotation="0 -135 0" color="#f3ecdd" surface="marble"/>
+        <v-box size="1.080 0.12 0.16" position="2.864 75.910 2.864" rotation="0 -135 0" color="#e9e1cf" surface="marble"/>
+        <v-cylinder radius="0.05" height="0.95" position="2.465 76.325 3.213" color="#f3ecdd" segments="10" surface="marble"/>
+        <v-box size="1.080 0.1 0.14" position="2.025 76.850 3.507" rotation="0 -150 0" color="#f3ecdd" surface="marble" collide="true"/>
+        <v-box size="1.080 0.05 0.08" position="2.025 76.400 3.507" rotation="0 -150 0" color="#f3ecdd" surface="marble"/>
+        <v-box size="1.080 0.12 0.16" position="2.025 75.910 3.507" rotation="0 -150 0" color="#e9e1cf" surface="marble"/>
+        <v-cylinder radius="0.05" height="0.95" position="1.550 76.325 3.742" color="#f3ecdd" segments="10" surface="marble"/>
+        <v-box size="1.080 0.1 0.14" position="1.048 76.850 3.912" rotation="0 -165 0" color="#f3ecdd" surface="marble" collide="true"/>
+        <v-box size="1.080 0.05 0.08" position="1.048 76.400 3.912" rotation="0 -165 0" color="#f3ecdd" surface="marble"/>
+        <v-box size="1.080 0.12 0.16" position="1.048 75.910 3.912" rotation="0 -165 0" color="#e9e1cf" surface="marble"/>
+        <v-cylinder radius="0.05" height="0.95" position="0.529 76.325 4.015" color="#f3ecdd" segments="10" surface="marble"/>
+        <v-box size="1.080 0.1 0.14" position="0.000 76.850 4.050" rotation="0 -180 0" color="#f3ecdd" surface="marble" collide="true"/>
+        <v-box size="1.080 0.05 0.08" position="0.000 76.400 4.050" rotation="0 -180 0" color="#f3ecdd" surface="marble"/>
+        <v-box size="1.080 0.12 0.16" position="0.000 75.910 4.050" rotation="0 -180 0" color="#e9e1cf" surface="marble"/>
+        <v-cylinder radius="0.05" height="0.95" position="-0.529 76.325 4.015" color="#f3ecdd" segments="10" surface="marble"/>
+        <v-box size="1.080 0.1 0.14" position="-1.048 76.850 3.912" rotation="0 -195 0" color="#f3ecdd" surface="marble" collide="true"/>
+        <v-box size="1.080 0.05 0.08" position="-1.048 76.400 3.912" rotation="0 -195 0" color="#f3ecdd" surface="marble"/>
+        <v-box size="1.080 0.12 0.16" position="-1.048 75.910 3.912" rotation="0 -195 0" color="#e9e1cf" surface="marble"/>
+        <v-cylinder radius="0.05" height="0.95" position="-1.550 76.325 3.742" color="#f3ecdd" segments="10" surface="marble"/>
+        <v-box size="1.080 0.1 0.14" position="-2.025 76.850 3.507" rotation="0 -210 0" color="#f3ecdd" surface="marble" collide="true"/>
+        <v-box size="1.080 0.05 0.08" position="-2.025 76.400 3.507" rotation="0 -210 0" color="#f3ecdd" surface="marble"/>
+        <v-box size="1.080 0.12 0.16" position="-2.025 75.910 3.507" rotation="0 -210 0" color="#e9e1cf" surface="marble"/>
+        <v-cylinder radius="0.05" height="0.95" position="-2.465 76.325 3.213" color="#f3ecdd" segments="10" surface="marble"/>
+        <v-box size="1.080 0.1 0.14" position="-2.864 76.850 2.864" rotation="0 -225 0" color="#f3ecdd" surface="marble" collide="true"/>
+        <v-box size="1.080 0.05 0.08" position="-2.864 76.400 2.864" rotation="0 -225 0" color="#f3ecdd" surface="marble"/>
+        <v-box size="1.080 0.12 0.16" position="-2.864 75.910 2.864" rotation="0 -225 0" color="#e9e1cf" surface="marble"/>
+        <v-cylinder radius="0.05" height="0.95" position="-3.213 76.325 2.465" color="#f3ecdd" segments="10" surface="marble"/>
+        <v-box size="1.080 0.1 0.14" position="-3.507 76.850 2.025" rotation="0 -240 0" color="#f3ecdd" surface="marble" collide="true"/>
+        <v-box size="1.080 0.05 0.08" position="-3.507 76.400 2.025" rotation="0 -240 0" color="#f3ecdd" surface="marble"/>
+        <v-box size="1.080 0.12 0.16" position="-3.507 75.910 2.025" rotation="0 -240 0" color="#e9e1cf" surface="marble"/>
+        <v-cylinder radius="0.05" height="0.95" position="-3.742 76.325 1.550" color="#f3ecdd" segments="10" surface="marble"/>
+        <v-box size="1.080 0.1 0.14" position="-3.912 76.850 1.048" rotation="0 -255 0" color="#f3ecdd" surface="marble" collide="true"/>
+        <v-box size="1.080 0.05 0.08" position="-3.912 76.400 1.048" rotation="0 -255 0" color="#f3ecdd" surface="marble"/>
+        <v-box size="1.080 0.12 0.16" position="-3.912 75.910 1.048" rotation="0 -255 0" color="#e9e1cf" surface="marble"/>
+        <v-cylinder radius="0.05" height="0.95" position="-4.015 76.325 0.529" color="#f3ecdd" segments="10" surface="marble"/>
+        <v-box size="1.080 0.1 0.14" position="-4.050 76.850 0.000" rotation="0 -270 0" color="#f3ecdd" surface="marble" collide="true"/>
+        <v-box size="1.080 0.05 0.08" position="-4.050 76.400 0.000" rotation="0 -270 0" color="#f3ecdd" surface="marble"/>
+        <v-box size="1.080 0.12 0.16" position="-4.050 75.910 0.000" rotation="0 -270 0" color="#e9e1cf" surface="marble"/>
+        <v-cylinder radius="0.05" height="0.95" position="-4.015 76.325 -0.529" color="#f3ecdd" segments="10" surface="marble"/>
+        <v-box size="1.080 0.1 0.14" position="-3.912 76.850 -1.048" rotation="0 -285 0" color="#f3ecdd" surface="marble" collide="true"/>
+        <v-box size="1.080 0.05 0.08" position="-3.912 76.400 -1.048" rotation="0 -285 0" color="#f3ecdd" surface="marble"/>
+        <v-box size="1.080 0.12 0.16" position="-3.912 75.910 -1.048" rotation="0 -285 0" color="#e9e1cf" surface="marble"/>
+        <v-cylinder radius="0.05" height="0.95" position="-3.742 76.325 -1.550" color="#f3ecdd" segments="10" surface="marble"/>
+        <v-box size="1.080 0.1 0.14" position="-3.507 76.850 -2.025" rotation="0 -300 0" color="#f3ecdd" surface="marble" collide="true"/>
+        <v-box size="1.080 0.05 0.08" position="-3.507 76.400 -2.025" rotation="0 -300 0" color="#f3ecdd" surface="marble"/>
+        <v-box size="1.080 0.12 0.16" position="-3.507 75.910 -2.025" rotation="0 -300 0" color="#e9e1cf" surface="marble"/>
+        <v-cylinder radius="0.05" height="0.95" position="-3.213 76.325 -2.465" color="#f3ecdd" segments="10" surface="marble"/>
+        <v-box size="1.080 0.1 0.14" position="-2.864 76.850 -2.864" rotation="0 -315 0" color="#f3ecdd" surface="marble" collide="true"/>
+        <v-box size="1.080 0.05 0.08" position="-2.864 76.400 -2.864" rotation="0 -315 0" color="#f3ecdd" surface="marble"/>
+        <v-box size="1.080 0.12 0.16" position="-2.864 75.910 -2.864" rotation="0 -315 0" color="#e9e1cf" surface="marble"/>
+        <v-cylinder radius="0.05" height="0.95" position="-2.465 76.325 -3.213" color="#f3ecdd" segments="10" surface="marble"/>
+        <v-box size="1.080 0.1 0.14" position="-2.025 76.850 -3.507" rotation="0 -330 0" color="#f3ecdd" surface="marble" collide="true"/>
+        <v-box size="1.080 0.05 0.08" position="-2.025 76.400 -3.507" rotation="0 -330 0" color="#f3ecdd" surface="marble"/>
+        <v-box size="1.080 0.12 0.16" position="-2.025 75.910 -3.507" rotation="0 -330 0" color="#e9e1cf" surface="marble"/>
+        <v-cylinder radius="0.05" height="0.95" position="-1.550 76.325 -3.742" color="#f3ecdd" segments="10" surface="marble"/>
+        <v-box size="1.080 0.1 0.14" position="-1.048 76.850 -3.912" rotation="0 -345 0" color="#f3ecdd" surface="marble" collide="true"/>
+        <v-box size="1.080 0.05 0.08" position="-1.048 76.400 -3.912" rotation="0 -345 0" color="#f3ecdd" surface="marble"/>
+        <v-box size="1.080 0.12 0.16" position="-1.048 75.910 -3.912" rotation="0 -345 0" color="#e9e1cf" surface="marble"/>
+        <v-cylinder radius="0.05" height="0.95" position="-0.529 76.325 -4.015" color="#f3ecdd" segments="10" surface="marble"/>
+        <v-box size="1.080 0.1 0.14" position="-0.000 76.850 -4.050" rotation="0 -360 0" color="#f3ecdd" surface="marble" collide="true"/>
+        <v-box size="1.080 0.05 0.08" position="-0.000 76.400 -4.050" rotation="0 -360 0" color="#f3ecdd" surface="marble"/>
+        <v-box size="1.080 0.12 0.16" position="-0.000 75.910 -4.050" rotation="0 -360 0" color="#e9e1cf" surface="marble"/>
+        <v-cylinder radius="0.05" height="0.95" position="0.529 76.325 -4.015" color="#f3ecdd" segments="10" surface="marble"/>
+        <v-box size="1.080 0.1 0.14" position="1.048 76.850 -3.912" rotation="0 -375 0" color="#f3ecdd" surface="marble" collide="true"/>
+        <v-box size="1.080 0.05 0.08" position="1.048 76.400 -3.912" rotation="0 -375 0" color="#f3ecdd" surface="marble"/>
+        <v-box size="1.080 0.12 0.16" position="1.048 75.910 -3.912" rotation="0 -375 0" color="#e9e1cf" surface="marble"/>
+        <v-cylinder radius="0.05" height="0.95" position="1.550 76.325 -3.742" color="#f3ecdd" segments="10" surface="marble"/>
+        <v-box size="1.080 0.1 0.14" position="2.025 76.850 -3.507" rotation="0 -390 0" color="#f3ecdd" surface="marble" collide="true"/>
+        <v-box size="1.080 0.05 0.08" position="2.025 76.400 -3.507" rotation="0 -390 0" color="#f3ecdd" surface="marble"/>
+        <v-box size="1.080 0.12 0.16" position="2.025 75.910 -3.507" rotation="0 -390 0" color="#e9e1cf" surface="marble"/>
+        <v-cylinder radius="0.05" height="0.95" position="2.465 76.325 -3.213" color="#f3ecdd" segments="10" surface="marble"/>
+        <v-box size="1.080 0.1 0.14" position="2.864 76.850 -2.864" rotation="0 -405 0" color="#f3ecdd" surface="marble" collide="true"/>
+        <v-box size="1.080 0.05 0.08" position="2.864 76.400 -2.864" rotation="0 -405 0" color="#f3ecdd" surface="marble"/>
+        <v-box size="1.080 0.12 0.16" position="2.864 75.910 -2.864" rotation="0 -405 0" color="#e9e1cf" surface="marble"/>
+        <v-cylinder radius="0.05" height="0.95" position="3.213 76.325 -2.465" color="#f3ecdd" segments="10" surface="marble"/>
+        <v-box size="1.080 0.1 0.14" position="3.507 76.850 -2.025" rotation="0 -420 0" color="#f3ecdd" surface="marble" collide="true"/>
+        <v-box size="1.080 0.05 0.08" position="3.507 76.400 -2.025" rotation="0 -420 0" color="#f3ecdd" surface="marble"/>
+        <v-box size="1.080 0.12 0.16" position="3.507 75.910 -2.025" rotation="0 -420 0" color="#e9e1cf" surface="marble"/>
+        <v-cylinder radius="0.05" height="0.95" position="3.742 76.325 -1.550" color="#f3ecdd" segments="10" surface="marble"/>
+        <v-box size="1.080 0.1 0.14" position="3.912 76.850 -1.048" rotation="0 -435 0" color="#f3ecdd" surface="marble" collide="true"/>
+        <v-box size="1.080 0.05 0.08" position="3.912 76.400 -1.048" rotation="0 -435 0" color="#f3ecdd" surface="marble"/>
+        <v-box size="1.080 0.12 0.16" position="3.912 75.910 -1.048" rotation="0 -435 0" color="#e9e1cf" surface="marble"/>
+        <v-cylinder radius="0.05" height="0.95" position="4.015 76.325 -0.529" color="#f3ecdd" segments="10" surface="marble"/>
+        <v-group position="2.376 75.850 -2.290" rotation="0 133.95 0">
+          <v-box size="2 0.08 0.6" position="0 0.04 0" color="#e7dcc6" surface="marble"/>
+          <v-box size="1.8 2 0.24" position="0 1.08 0" color="#e7dcc6" surface="marble"/>
+          <v-cylinder radius="0.9" height="0.24" position="0 2.08 0" rotation="90 0 0" segments="32" color="#e7dcc6" surface="marble"/>
+          <v-box size="1.4 2 0.26" position="0 1.08 0" color="#d9f4ff" glow="#3fb6ff"/>
+          <v-cylinder radius="0.7" height="0.26" position="0 2.08 0" rotation="90 0 0" segments="32" color="#d9f4ff" glow="#3fb6ff"/>
+          <v-portal href="#room-door" size="1.4 2.4 0.6" position="0 0.08 0"/>
+        </v-group>
+        <v-place id="lookout-arrival" position="0.720 75.850 -0.694" rotation="0 133.95 0"/>
+      </v-group>
     </v-group>
     <v-group position="86.74 0 76.04">
       <v-cylinder radius="14" height="28" position="0 14 0" color="#efe6d3" segments="24" collide="true" surface="marble"/>
@@ -22335,7 +22444,10 @@
     <v-model src="../kits/kenney-furniture/pottedPlant.glb" position="2.8 20.06 -10.55" rotation="0 40 0" scale="1.6 1.6 1.6" collide="true"/>
     <v-model src="../kits/kenney-furniture/pottedPlant.glb" position="-6.5 20.06 -19.5" rotation="0 70 0" scale="1.8 1.8 1.8" collide="true"/>
     <v-model src="../kits/kenney-furniture/pottedPlant.glb" position="6.5 20.06 -19.5" rotation="0 10 0" scale="1.8 1.8 1.8" collide="true"/>
-    <!-- The back wall: the portal, a round-topped doorway of light (travel comes later) -->
+    <!-- The back wall: the portal, a round-topped doorway of light. Walk into it to reach the
+         lookout on top of the green-domed tower (decision #70) -->
+    <v-portal href="#lookout-arrival" size="2.6 2.4 0.5" position="0 20.06 -10.5"/>
+    <v-place id="room-door" position="0 20.06 -11.7"/>
     <v-box size="3.4 2.1 0.3" position="0 21.05 -10.1" color="#e7dcc6" surface="marble"/>
     <v-cylinder radius="1.7" height="0.3" position="0 22.1 -10.1" color="#e7dcc6" rotation="90 0 0" segments="32" surface="marble"/>
     <v-box size="2.7 2.1 0.32" position="0 21.05 -10.13" color="#d9f4ff" glow="#3fb6ff"/>
