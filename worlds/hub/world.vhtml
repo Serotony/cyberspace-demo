@@ -18554,7 +18554,7 @@
 
   <v-group id="room">
     <!-- Your room. Plaster walls over wood panelling, a beamed ceiling, a plank floor -->
-    <v-box size="14.2 0.06 11" position="0 20.03 -15.3" color="#c99c6c" surface="planks"/>
+    <v-box size="14.2 0.06 11" position="0 20.03 -15.3" color="#c99c6c" surface="planks" collide="true"/>
     <!-- The solid floor: the whole room and on under the balcony, so there's no gap to fall through -->
     <v-box hidden="" size="14.4 0.5 12.4" position="0 19.81 -15.6" collide="true"/>
     <!-- A stone threshold where the room meets the balcony -->
