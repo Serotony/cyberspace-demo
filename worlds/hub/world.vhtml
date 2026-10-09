@@ -22196,7 +22196,7 @@
 
   </v-group>
 
-  <v-group id="room" ambient="0.45">
+  <v-group id="room" ambient="0.38">
     <!-- Your room. Plaster walls over wood panelling, a beamed ceiling, a plank floor. Under a roof, so it gets less of the sky's light (ambient) -->
     <v-box size="14.2 0.06 11" position="0 20.03 -15.3" color="#c99c6c" surface="planks" collide="true"/>
     <!-- The solid floor: the whole room and on under the balcony, so there's no gap to fall through -->
@@ -22264,11 +22264,25 @@
     <!-- Sitting area facing the view: sofa, armchairs, a low table on a patterned rug -->
     <!-- West wall: a fireplace with a painting above, bookshelves either side -->
     <!-- Layers are kept a few centimetres apart: surfaces at exactly the same depth flicker, worst in VR -->
-    <v-box size="0.7 2.4 3" position="-6.55 21.26 -15" color="#e3d8c4" surface="stone"/>
-    <v-box size="0.04 1.3 1.7" position="-6.19 20.75 -15" color="#2a201a"/>
-    <v-box size="0.04 0.55 1.1" position="-6.14 20.45 -15" color="#ffb35a" glow="#ff7a1a"/>
-    <v-box size="0.55 0.06 2.4" position="-5.92 20.09 -15" color="#d6cab2" surface="stone"/>
-    <v-box size="0.9 0.16 3.4" position="-6.45 22.53 -15" color="#cdbfa6" surface="marble"/>
+    <!-- The chimney breast, built around a real recess for the fire -->
+    <v-box size="0.7 2.4 0.65" position="-6.55 21.26 -16.175" color="#e3d8c4" surface="stone" collide="true"/>
+    <v-box size="0.7 2.4 0.65" position="-6.55 21.26 -13.825" color="#e3d8c4" surface="stone" collide="true"/>
+    <v-box size="0.7 1.04 1.7" position="-6.55 21.94 -15" color="#e3d8c4" surface="stone" collide="true"/>
+    <!-- Inside the fireplace: sooty back, sides, roof and floor -->
+    <v-box size="0.06 1.36 1.7" position="-6.87 20.74 -15" color="#1d1612" surface="brick"/>
+    <v-box size="0.64 1.36 0.02" position="-6.53 20.74 -15.835" color="#2b211b" surface="brick"/>
+    <v-box size="0.64 1.36 0.02" position="-6.53 20.74 -14.165" color="#2b211b" surface="brick"/>
+    <v-box size="0.64 0.02 1.65" position="-6.53 21.405 -15" color="#18120f"/>
+    <v-box size="0.64 0.02 1.65" position="-6.53 20.07 -15" color="#241b16" surface="stone"/>
+    <!-- Logs on a bed of embers, and the fire itself; its light flickers across the room -->
+    <v-box size="0.36 0.04 0.9" position="-6.54 20.1 -15" color="#ff7a2a" glow="#ff5a10"/>
+    <v-cylinder radius="0.065" height="0.85" position="-6.62 20.15 -15" rotation="90 0 0" color="#5a3b24" surface="wood"/>
+    <v-cylinder radius="0.065" height="0.8" position="-6.47 20.15 -15.04" rotation="90 0 6" color="#4e3220" surface="wood"/>
+    <v-cylinder radius="0.055" height="0.7" position="-6.54 20.26 -14.97" rotation="90 0 -8" color="#5f412a" surface="wood"/>
+    <v-fire size="0.8 0.55" position="-6.55 20.17 -15"/>
+    <v-light position="-6.0 20.6 -15" color="#ff9445" intensity="5" range="7" flicker="1"/>
+    <v-box size="0.55 0.06 2.4" position="-5.92 20.09 -15" color="#d6cab2" surface="stone" collide="true"/>
+    <v-box size="0.9 0.16 3.4" position="-6.45 22.53 -15" color="#cdbfa6" surface="marble" collide="true"/>
     <v-box size="0.06 1 2.1" position="-6.86 23.18 -15" color="#c9a24d" surface="gold"/>
     <v-box size="0.06 0.82 1.88" position="-6.81 23.18 -15" color="#7fb3d8"/>
     <v-box size="0.06 0.32 1.88" position="-6.77 22.93 -15" color="#6aa05a"/>
@@ -22280,7 +22294,12 @@
     <v-model src="../kits/kaykit-furniture/armchair_pillows.gltf" position="-2.75 20.06 -17.1" rotation="0 110 0" scale="0.72 0.72 0.72" collide="true"/>
     <v-model src="../kits/kaykit-furniture/armchair_pillows.gltf" position="2.75 20.06 -17.1" rotation="0 -110 0" scale="0.72 0.72 0.72" collide="true"/>
     <v-model src="../kits/kaykit-furniture/table_low.gltf" position="0 20.06 -16.9" rotation="0 0 0" scale="0.72 0.72 0.72" collide="true"/>
-    <v-model src="../kits/kaykit-furniture/book_set.gltf" position="0.35 20.42 -16.95" rotation="0 15 0" scale="0.6 0.6 0.6"/>
+    <v-model src="../kits/kaykit-furniture/book_set.gltf" position="0.35 20.572 -16.95" rotation="0 15 0" scale="0.6 0.6 0.6" grab=""/>
+    <!-- A bowl of fruit on the low table -->
+    <v-cylinder radius="0.09" radius-top="0.14" height="0.07" position="-0.35 20.455 -16.9" color="#b5835a" surface="wood" collide="true"/>
+    <v-group position="-0.4 20.53 -16.86" grab=""><v-sphere radius="0.04" color="#b8322a" surface="marble"/><v-cylinder radius="0.004" height="0.02" position="0 0.045 0" color="#5b3a1e"/></v-group>
+    <v-group position="-0.3 20.532 -16.88" grab=""><v-sphere radius="0.042" color="#e8892a" surface="matte"/></v-group>
+    <v-group position="-0.35 20.53 -16.96" grab=""><v-sphere radius="0.04" color="#86b23f" surface="marble"/><v-cylinder radius="0.004" height="0.02" position="0 0.045 0" color="#5b3a1e"/></v-group>
     <v-model src="../kits/kaykit-furniture/lamp_standing.gltf" position="-2.3 20.06 -13.9" rotation="0 0 0" scale="0.72 0.72 0.72"/>
     <!-- East wall: the bed, a bedside table and lamp, a picture; a writing desk by the window -->
     <v-model src="../kits/kaykit-furniture/bed_double_B.gltf" position="5.75 20.06 -12.4" rotation="0 -90 0" scale="0.72 0.72 0.72" collide="true"/>
@@ -22290,7 +22309,22 @@
     <v-model src="../kits/kaykit-furniture/table_medium.gltf" position="6.05 20.06 -17.4" rotation="0 90 0" scale="0.72 0.72 0.72" collide="true"/>
     <v-model src="../kits/kaykit-furniture/chair_A_wood.gltf" position="4.95 20.06 -17.4" rotation="0 90 0" scale="0.72 0.72 0.72" collide="true"/>
     <v-model src="../kits/kaykit-furniture/lamp_table.gltf" position="6.35 20.779999999999998 -16.9" rotation="0 0 0" scale="0.5 0.5 0.5"/>
-    <v-model src="../kits/kaykit-furniture/book_single.gltf" position="6.2 20.779999999999998 -17.8" rotation="0 70 0" scale="0.7 0.7 0.7"/>
+    <v-model src="../kits/kaykit-furniture/book_single.gltf" position="6.2 20.952 -17.8" rotation="0 70 0" scale="0.7 0.7 0.7" grab=""/>
+    <!-- On the desk: a mug of coffee, an apple, a candle, some papers -->
+    <v-group position="5.62 20.782 -17.05" rotation="0 30 0" grab="">
+      <v-cylinder radius="0.04" height="0.1" position="0 0.05 0" color="#3d6e9e" surface="marble"/>
+      <v-cylinder radius="0.034" height="0.004" position="0 0.092 0" color="#3b2416"/>
+      <v-box size="0.012 0.06 0.02" position="0.056 0.05 0" color="#3d6e9e" surface="marble"/>
+      <v-box size="0.02 0.012 0.02" position="0.046 0.074 0" color="#3d6e9e" surface="marble"/>
+      <v-box size="0.02 0.012 0.02" position="0.046 0.026 0" color="#3d6e9e" surface="marble"/>
+    </v-group>
+    <v-group position="5.58 20.822 -17.72" grab=""><v-sphere radius="0.04" color="#c0392b" surface="marble"/><v-cylinder radius="0.004" height="0.02" position="0 0.045 0" color="#5b3a1e"/></v-group>
+    <v-group position="6.55 20.782 -17.85" grab="">
+      <v-cylinder radius="0.045" height="0.015" position="0 0.0075 0" color="#c9a24d" surface="gold"/>
+      <v-cylinder radius="0.018" height="0.12" position="0 0.075 0" color="#f3ead8" surface="marble"/>
+      <v-sphere radius="0.009" position="0 0.145 0" color="#fff1c9" glow="#ffb347"/>
+    </v-group>
+    <v-box size="0.21 0.008 0.297" position="5.9 20.786 -17.42" rotation="0 9 0" color="#f4f0e6" surface="matte" grab=""/>
     <!-- West wall: cabinets with shelves above, either side of the fireplace -->
     <v-model src="../kits/kaykit-furniture/cabinet_medium_decorated.gltf" position="-6.45 20.06 -11.6" rotation="0 90 0" scale="0.8 0.8 0.8" collide="true"/>
     <v-model src="../kits/kaykit-furniture/cabinet_medium_decorated.gltf" position="-6.45 20.06 -18.4" rotation="0 90 0" scale="0.8 0.8 0.8" collide="true"/>
@@ -22311,6 +22345,91 @@
     <v-sphere radius="0.18" position="-4.6 22.7 -10.2" color="#fff1c9" glow="#ffcf7a"/>
     <v-box size="0.15 0.4 0.15" position="4.6 22.4 -10.1" color="#c9a24d" surface="gold"/>
     <v-sphere radius="0.18" position="4.6 22.7 -10.2" color="#fff1c9" glow="#ffcf7a"/>
+    <!-- The room's own lights: they light the room and nothing else (decision #69) -->
+    <v-light position="0 22.85 -16.8" color="#ffd9a6" intensity="8" range="11"/>
+    <v-light position="-2.3 21.6 -13.9" color="#ffcf8f" intensity="2" range="5"/>
+    <v-light position="6.5 21.0 -14.1" color="#ffcf8f" intensity="1.2" range="4"/>
+    <v-light position="6.35 21.1 -16.9" color="#ffcf8f" intensity="1.2" range="4"/>
+    <v-light position="0 21.4 -10.7" color="#7fcfff" intensity="2" range="5"/>
+    <!-- Glowing bulbs under the lamp shades -->
+    <v-sphere radius="0.035" position="6.5 21.0 -14.1" color="#fff1c9" glow="#ffd38a"/>
+    <v-sphere radius="0.035" position="6.35 21.08 -16.9" color="#fff1c9" glow="#ffd38a"/>
+    <v-sphere radius="0.045" position="-2.3 21.62 -13.9" color="#fff1c9" glow="#ffd38a"/>
+    <!-- Bookcases either side of the portal, full of books (some you can take down) -->
+    <v-group position="5.8 20.06 -10.27">
+      <v-box size="0.04 2 0.32" position="-0.43 1 0" color="#7a4e2f" surface="wood" collide="true"/>
+      <v-box size="0.04 2 0.32" position="0.43 1 0" color="#7a4e2f" surface="wood" collide="true"/>
+      <v-box size="0.82 2 0.02" position="0 1 0.15" color="#6a4128" surface="wood"/>
+      <v-box size="0.9 0.04 0.34" position="0 2.02 0" color="#7a4e2f" surface="wood" collide="true"/>
+      <v-box size="0.82 0.08 0.3" position="0 0.04 0" color="#6a4128" surface="wood" collide="true"/>
+      <v-box size="0.82 0.03 0.3" position="0 0.48 0" color="#7a4e2f" surface="wood" collide="true"/>
+      <v-box size="0.82 0.03 0.3" position="0 0.93 0" color="#7a4e2f" surface="wood" collide="true"/>
+      <v-box size="0.82 0.03 0.3" position="0 1.38 0" color="#7a4e2f" surface="wood" collide="true"/>
+      <v-model src="../kits/kaykit-furniture/book_set.gltf" position="-0.2 0.1935 0" rotation="0 0 0" scale="0.45 0.45 0.45"/>
+      <v-model src="../kits/kaykit-furniture/book_set.gltf" position="0.2 0.1935 0" rotation="0 180 0" scale="0.45 0.45 0.45"/>
+      <v-model src="../kits/kaykit-furniture/book_set.gltf" position="-0.2 0.6085 0" rotation="0 180 0" scale="0.45 0.45 0.45" grab=""/>
+      <v-model src="../kits/kaykit-furniture/book_set.gltf" position="-0.2 1.0585 0" rotation="0 0 0" scale="0.45 0.45 0.45"/>
+      <v-model src="../kits/kaykit-furniture/book_set.gltf" position="0.2 1.0585 0" rotation="0 180 0" scale="0.45 0.45 0.45" grab=""/>
+      <v-model src="../kits/kaykit-furniture/book_set.gltf" position="0.2 1.5085 0" rotation="0 0 0" scale="0.45 0.45 0.45"/>
+      <v-model src="../kits/kaykit-furniture/cactus_small_A.gltf" position="0.2 0.495 0" scale="0.4 0.4 0.4"/>
+      <v-model src="../kits/kenney-furniture/plantSmall2.glb" position="-0.2 1.395 0" scale="1.2 1.2 1.2"/>
+    </v-group>
+    <v-group position="-5.8 20.06 -10.27">
+      <v-box size="0.04 2 0.32" position="-0.43 1 0" color="#7a4e2f" surface="wood" collide="true"/>
+      <v-box size="0.04 2 0.32" position="0.43 1 0" color="#7a4e2f" surface="wood" collide="true"/>
+      <v-box size="0.82 2 0.02" position="0 1 0.15" color="#6a4128" surface="wood"/>
+      <v-box size="0.9 0.04 0.34" position="0 2.02 0" color="#7a4e2f" surface="wood" collide="true"/>
+      <v-box size="0.82 0.08 0.3" position="0 0.04 0" color="#6a4128" surface="wood" collide="true"/>
+      <v-box size="0.82 0.03 0.3" position="0 0.48 0" color="#7a4e2f" surface="wood" collide="true"/>
+      <v-box size="0.82 0.03 0.3" position="0 0.93 0" color="#7a4e2f" surface="wood" collide="true"/>
+      <v-box size="0.82 0.03 0.3" position="0 1.38 0" color="#7a4e2f" surface="wood" collide="true"/>
+      <v-model src="../kits/kaykit-furniture/book_set.gltf" position="0.2 0.1935 0" rotation="0 0 0" scale="0.45 0.45 0.45"/>
+      <v-model src="../kits/kaykit-furniture/book_set.gltf" position="-0.2 0.1935 0" rotation="0 180 0" scale="0.45 0.45 0.45"/>
+      <v-model src="../kits/kaykit-furniture/book_set.gltf" position="0.2 0.6085 0" rotation="0 180 0" scale="0.45 0.45 0.45" grab=""/>
+      <v-model src="../kits/kaykit-furniture/book_set.gltf" position="0.2 1.0585 0" rotation="0 0 0" scale="0.45 0.45 0.45"/>
+      <v-model src="../kits/kaykit-furniture/book_set.gltf" position="-0.2 1.0585 0" rotation="0 180 0" scale="0.45 0.45 0.45" grab=""/>
+      <v-model src="../kits/kaykit-furniture/book_set.gltf" position="-0.2 1.5085 0" rotation="0 0 0" scale="0.45 0.45 0.45"/>
+      <v-model src="../kits/kaykit-furniture/cactus_small_A.gltf" position="-0.2 0.495 0" scale="0.4 0.4 0.4"/>
+      <v-model src="../kits/kenney-furniture/plantSmall2.glb" position="0.2 1.395 0" scale="1.2 1.2 1.2"/>
+    </v-group>
+    <!-- Pictures either side of the portal, and a clock over the desk -->
+    <v-model src="../kits/kaykit-furniture/pictureframe_medium.gltf" position="3.4 22.25 -10.005" rotation="0 180 0" scale="0.8 0.8 0.8"/>
+    <v-model src="../kits/kaykit-furniture/pictureframe_medium.gltf" position="-3.4 22.25 -10.005" rotation="0 180 0" scale="0.8 0.8 0.8"/>
+    <v-group position="6.86 22.35 -17.4">
+      <v-cylinder radius="0.24" height="0.06" rotation="0 0 90" color="#c9a24d" surface="gold" segments="32"/>
+      <v-cylinder radius="0.21" height="0.065" rotation="0 0 90" color="#f6efe0" segments="32"/>
+      <v-box size="0.012 0.13 0.014" position="-0.036 0.05 0" color="#2a2622"/>
+      <v-box size="0.012 0.014 0.17" position="-0.038 0 0.07" color="#2a2622"/>
+      <v-sphere radius="0.014" position="-0.036 0 0" color="#c9a24d" surface="gold"/>
+    </v-group>
+    <!-- Candlesticks on the mantelpiece -->
+    <v-group position="-6.25 22.612 -16.3" grab="">
+      <v-cylinder radius="0.05" height="0.02" position="0 0.01 0" color="#c9a24d" surface="gold"/>
+      <v-cylinder radius="0.012" height="0.1" position="0 0.07 0" color="#c9a24d" surface="gold"/>
+      <v-cylinder radius="0.02" height="0.16" position="0 0.2 0" color="#f3ead8" surface="marble"/>
+      <v-sphere radius="0.01" position="0 0.29 0" color="#fff1c9" glow="#ffb347"/>
+    </v-group>
+    <v-group position="-6.25 22.612 -13.7" grab="">
+      <v-cylinder radius="0.05" height="0.02" position="0 0.01 0" color="#c9a24d" surface="gold"/>
+      <v-cylinder radius="0.012" height="0.1" position="0 0.07 0" color="#c9a24d" surface="gold"/>
+      <v-cylinder radius="0.02" height="0.16" position="0 0.2 0" color="#f3ead8" surface="marble"/>
+      <v-sphere radius="0.01" position="0 0.29 0" color="#fff1c9" glow="#ffb347"/>
+    </v-group>
+    <!-- A teddy bear sitting up against the pillows -->
+    <v-group position="5.92 20.46 -12.4" grab="">
+      <v-sphere radius="0.085" position="0 0.09 0" color="#9a6a3f" surface="fabric"/>
+      <v-sphere radius="0.07" position="0.01 0.22 0" color="#9a6a3f" surface="fabric"/>
+      <v-sphere radius="0.03" position="-0.055 0.21 0" color="#d9b48a" surface="fabric"/>
+      <v-sphere radius="0.01" position="-0.083 0.215 0" color="#2a1d14"/>
+      <v-sphere radius="0.009" position="-0.055 0.24 0.025" color="#1a1410"/>
+      <v-sphere radius="0.009" position="-0.055 0.24 -0.025" color="#1a1410"/>
+      <v-sphere radius="0.028" position="0.015 0.285 0.05" color="#8a5c35" surface="fabric"/>
+      <v-sphere radius="0.028" position="0.015 0.285 -0.05" color="#8a5c35" surface="fabric"/>
+      <v-sphere radius="0.035" position="-0.03 0.12 0.085" color="#9a6a3f" surface="fabric"/>
+      <v-sphere radius="0.035" position="-0.03 0.12 -0.085" color="#9a6a3f" surface="fabric"/>
+      <v-sphere radius="0.04" position="-0.06 0.04 0.05" color="#9a6a3f" surface="fabric"/>
+      <v-sphere radius="0.04" position="-0.06 0.04 -0.05" color="#9a6a3f" surface="fabric"/>
+    </v-group>
     <!-- A chandelier over the sitting area -->
     <v-cylinder radius="0.03" height="0.9" position="0 23.45 -16.8" color="#6b5a48" surface="metal"/>
     <v-cylinder radius="0.9" height="0.08" position="0 23 -16.8" color="#c9a24d" segments="24" surface="gold"/>
