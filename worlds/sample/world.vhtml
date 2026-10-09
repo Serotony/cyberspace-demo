@@ -17,7 +17,7 @@
     <v-cylinder radius="0.35" height="1.6" position="0 1.4 0" color="#b8b1a3"/>
     <v-sphere radius="0.45" position="0 2.4 0" color="#e9c46a"/>
     <!-- Spatial sound, like <audio> but placed in the world: louder as you approach -->
-    <v-sound src="assets/fountain.wav" position="0 0.8 0" volume="0.9" distance="2.5"/>
+    <v-sound src="assets/fountain.wav" position="0 0.8 0" volume="0.4" distance="1.5"/>
   </v-group>
 
   <!-- Steps up to a platform: something to climb and jump around on -->

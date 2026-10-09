@@ -1,6 +1,6 @@
 # Cyberspace demo
 
-An early, single-world prototype of Cyberspace: a 3D world written in VHTML (HTML extended into
+An early prototype of Cyberspace: a 3D world written in VHTML (HTML extended into
 3D) and loaded in the browser. Works on desktop and in VR headsets with a WebXR browser (such as
 the Quest Browser).
 
