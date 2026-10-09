@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  The first sample world: a small plaza to walk around in.
+  Hand-written VHTML 0.1. Meters, glTF axes (+Y up), rotations in degrees applied turn-tilt-roll.
+  "v-" is a placeholder tag prefix until the project name is chosen (#25, #11).
+-->
+<v-world vhtml="0.1" title="First Light Plaza" spawn="0 0 12" sky="#a9cdf0">
+
+  <!-- Ground, stretching to the horizon -->
+  <v-plane size="1200 1200" color="#7f9a6a" collide="true"/>
+  <v-box size="16 0.2 16" position="0 0.1 0" color="#c9c2b4" collide="true"/>
+
+  <!-- A fountain in the middle -->
+  <v-group position="0 0.2 0">
+    <v-cylinder radius="2.4" height="0.6" position="0 0.3 0" color="#b8b1a3" collide="true"/>
+    <v-cylinder radius="2.1" height="0.05" position="0 0.58 0" color="#4f8fd6"/>
+    <v-cylinder radius="0.35" height="1.6" position="0 1.4 0" color="#b8b1a3"/>
+    <v-sphere radius="0.45" position="0 2.4 0" color="#e9c46a"/>
+    <!-- Spatial sound, like <audio> but placed in the world: louder as you approach -->
+    <v-sound src="assets/fountain.wav" position="0 0.8 0" volume="0.9" distance="2.5"/>
+  </v-group>
+
+  <!-- Steps up to a platform: something to climb and jump around on -->
+  <v-group position="-5 0.2 -5">
+    <v-box size="2 0.4 1" position="0 0.2 3" color="#8d99ae" collide="true"/>
+    <v-box size="2 0.8 1" position="0 0.4 2" color="#8d99ae" collide="true"/>
+    <v-box size="2 1.2 1" position="0 0.6 1" color="#8d99ae" collide="true"/>
+    <v-box size="4 1.6 3" position="0 0.8 -1" color="#6d7a93" collide="true"/>
+    <v-sphere radius="0.3" position="1.2 1.9 -1.6" color="#e76f51"/>
+  </v-group>
+
+  <!-- A bench, built from boxes and turned 30 degrees -->
+  <v-group position="5 0.2 3" rotation="0 30 0">
+    <v-box size="2 0.1 0.5" position="0 0.45 0" color="#8b5a2b" collide="true"/>
+    <v-box size="2 0.5 0.08" position="0 0.75 0.22" rotation="-10 0 0" color="#8b5a2b"/>
+    <v-box size="0.08 0.45 0.45" position="-0.9 0.22 0" color="#3d3d3d"/>
+    <v-box size="0.08 0.45 0.45" position="0.9 0.22 0" color="#3d3d3d"/>
+  </v-group>
+
+  <!-- Pillars around the edge -->
+  <v-cylinder radius="0.4" height="4" position="-7 2.2 7" color="#e0dccf" collide="true"/>
+  <v-cylinder radius="0.4" height="4" position="7 2.2 7" color="#e0dccf" collide="true"/>
+  <v-cylinder radius="0.4" height="4" position="-7 2.2 -7" color="#e0dccf" collide="true"/>
+  <v-cylinder radius="0.4" height="4" position="7 2.2 -7" color="#e0dccf" collide="true"/>
+
+  <!-- Street lamps: glTF models, referenced like images in HTML -->
+  <v-model src="assets/lamp.glb" position="-4 0.2 4"/>
+  <v-model src="assets/lamp.glb" position="4 0.2 -4" rotation="0 180 0"/>
+  <v-model src="assets/lamp.glb" position="6 0.2 6" rotation="0 -90 0"/>
+
+  <!--
+    The vista: a ring of giant monoliths on the horizon, softened by the haze.
+    Everything here is plain VHTML primitives; the scale is what makes it feel vast.
+  -->
+  <v-group>
+    <v-box size="18 150 18" position="42.8 75 -327.2" rotation="0 -7 0" color="#d9d4c7"/>
+    <v-box size="14 110 14" position="218.9 55 -285.8" rotation="0 -37 0" color="#cbc5b7"/>
+    <v-box size="18 170 18" position="304.8 85 -126.6" rotation="0 -67 0" color="#d9d4c7"/>
+    <v-box size="14 125 14" position="357.0 62.5 46.7" rotation="0 -97 0" color="#cbc5b7"/>
+    <v-box size="18 160 18" position="262.0 80 200.7" rotation="0 -127 0" color="#d9d4c7"/>
+    <v-box size="14 105 14" position="138.1 52.5 332.5" rotation="0 -157 0" color="#cbc5b7"/>
+    <v-box size="18 180 18" position="-42.8 90 327.2" rotation="0 -187 0" color="#d9d4c7"/>
+    <v-box size="14 120 14" position="-218.9 60 285.8" rotation="0 -217 0" color="#cbc5b7"/>
+    <v-box size="18 145 18" position="-304.8 72.5 126.6" rotation="0 -247 0" color="#d9d4c7"/>
+    <v-box size="14 115 14" position="-357.0 57.5 -46.7" rotation="0 -277 0" color="#cbc5b7"/>
+    <v-box size="18 165 18" position="-262.0 82.5 -200.7" rotation="0 -307 0" color="#d9d4c7"/>
+    <v-box size="14 130 14" position="-138.1 65 -332.5" rotation="0 -337 0" color="#cbc5b7"/>
+  </v-group>
+
+  <!-- A little house to walk into, to try the third-person camera against walls -->
+  <v-group position="0 0.2 -12">
+    <v-box size="6 3 0.3" position="0 1.5 -3" color="#d4a373" collide="true"/>
+    <v-box size="0.3 3 6" position="-3 1.5 0" color="#d4a373" collide="true"/>
+    <v-box size="0.3 3 6" position="3 1.5 0" color="#d4a373" collide="true"/>
+    <v-box size="2.2 3 0.3" position="-1.9 1.5 3" color="#d4a373" collide="true"/>
+    <v-box size="2.2 3 0.3" position="1.9 1.5 3" color="#d4a373" collide="true"/>
+    <v-box size="6.4 0.3 6.4" position="0 3.15 0" color="#9c6644" collide="true"/>
+  </v-group>
+
+</v-world>
